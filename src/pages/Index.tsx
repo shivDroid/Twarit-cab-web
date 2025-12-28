@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet-async";
-import StickyCallBar from "@/components/StickyCallBar";
-import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import PricingSection from "@/components/PricingSection";
-import ToursSection from "@/components/ToursSection";
-import TrustSection from "@/components/TrustSection";
-import Footer from "@/components/Footer";
+import StickyCallBar from "@/components/ui/StickyCallBar";
+import HeroSection from "@/components/ui/HeroSection";
+import ServicesSection from "@/components/ui/ServicesSection";
+import PricingSection from "@/components/ui/PricingSection";
+import ToursSection from "@/components/ui/ToursSection";
+import TrustSection from "@/components/ui/TrustSection";
+import Footer from "@/components/ui/Footer";
 
 const Index = () => {
   const structuredData = {
