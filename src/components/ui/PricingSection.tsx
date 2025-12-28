@@ -2,15 +2,11 @@ import { Phone, MessageCircle } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-import carSeltos from "@/assets/car-seltos.avif";
-import carGrandVitara from "@/assets/car-grand-vitara.avif";
-import carInnova from "@/assets/car-innova.avif";
-
 const vehicles = [
   {
     name: "Kia Seltos",
     type: "SUV • 5 Seater",
-    image: carSeltos,
+    image: "/car-seltos.avif",
     features: ["AC", "Music System", "Comfortable Seats", "Premium Interior"],
     pricing: {
       insideCity: "₹12/km",
@@ -24,7 +20,7 @@ const vehicles = [
   {
     name: "Grand Vitara",
     type: "Premium SUV • 5 Seater",
-    image: carGrandVitara,
+    image: "/car-grand-vitara.avif",
     features: ["AC", "Music System", "Extra Legroom", "Premium Interior"],
     pricing: {
       insideCity: "₹14/km",
@@ -38,7 +34,7 @@ const vehicles = [
   {
     name: "Innova Crysta",
     type: "MPV • 7 Seater",
-    image: carInnova,
+    image: "/car-innova.avif",
     features: ["AC", "Music System", "Spacious", "Family Friendly"],
     pricing: {
       insideCity: "₹16/km",
