@@ -34,8 +34,8 @@ const tours = [
 ];
 
 const ToursSection = () => {
-  const phoneNumber = "+91 XXXXX XXXXX";
-  const whatsappNumber = "91XXXXXXXXXX";
+  const phoneNumber = "+91 8756303701";
+  const whatsappNumber = "918756303701";
 
   return (
     <section id="tours" className="py-20 bg-secondary/30">
