@@ -135,7 +135,7 @@ const PricingSection = () => {
 
               <CardFooter className="pt-4 flex flex-col gap-2">
                 <Button 
-                  variant={vehicle.popular ? "saffron" : "outline"} 
+                  variant="saffron" 
                   size="lg" 
                   className="w-full"
                   asChild

@@ -101,7 +101,7 @@ const ToursSection = () => {
                     Call to Book
                   </a>
                 </Button>
-                <Button variant="outline" size="default" asChild>
+                <Button variant="outline" size="default" className="border-2 border-gray-300 bg-white text-gray-700 hover:bg-gray-50" asChild>
                   <a
                     href={`https://wa.me/${whatsappNumber}?text=Hi, I want to book ${tour.title}`}
                     target="_blank"

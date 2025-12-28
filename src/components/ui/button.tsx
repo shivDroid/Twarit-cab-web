@@ -18,11 +18,16 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Colorful variants for CTAs
+        hero: "bg-[#FF6B35] text-white hover:bg-[#FF6B35]/90 shadow-lg hover:shadow-xl transition-all",
+        saffron: "bg-[#FF6B35] text-white hover:bg-[#FF6B35]/90 shadow-md hover:shadow-lg transition-all",
+        whatsapp: "bg-[#25D366] text-white hover:bg-[#25D366]/90 shadow-lg hover:shadow-xl transition-all",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-12 px-8 py-3 text-base rounded-lg",
         icon: "h-10 w-10",
       },
     },
