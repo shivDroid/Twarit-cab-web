@@ -1,8 +1,8 @@
 import { Phone, MessageCircle, MapPin, Clock, Mail } from "lucide-react";
 
 const Footer = () => {
-  const phoneNumber = "+91 XXXXX XXXXX";
-  const whatsappNumber = "91XXXXXXXXXX";
+  const phoneNumber = "+91 8756303701";
+  const whatsappLink = "https://wa.me/918756303701";
   const email = "contact@twarittravel.com";
 
   const serviceAreas = [
@@ -51,7 +51,7 @@ const Footer = () => {
                 <span>{phoneNumber}</span>
               </a>
               <a 
-                href={`https://wa.me/${whatsappNumber}`}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white hover:text-primary transition-colors"

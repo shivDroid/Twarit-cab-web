@@ -1,7 +1,7 @@
 import { Phone } from "lucide-react";
 
 const StickyCallBar = () => {
-  const phoneNumber = "+91 XXXXX XXXXX";
+  const phoneNumber = "+91 8756303701";
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-primary via-saffron-light to-primary py-2.5 shadow-md">

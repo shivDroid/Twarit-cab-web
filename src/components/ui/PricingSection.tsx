@@ -1,27 +1,17 @@
-import { Phone, Check } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+import carSeltos from "@/assets/car-seltos.avif";
+import carGrandVitara from "@/assets/car-grand-vitara.avif";
+import carInnova from "@/assets/car-innova.avif";
+
 const vehicles = [
   {
-    name: "Swift Dzire",
-    type: "Sedan • 4 Seater",
-    image: "🚗",
-    features: ["AC", "Music System", "Comfortable Seats"],
-    pricing: {
-      insideCity: "₹10/km",
-      airport: "₹800",
-      eightHours: "₹1,800",
-      fullDay: "₹3,000",
-      outstationPerKm: "₹12/km",
-    },
-    popular: false,
-  },
-  {
-    name: "Honda Amaze",
-    type: "Premium Sedan • 4 Seater",
-    image: "🚙",
-    features: ["AC", "Music System", "Extra Legroom", "Premium Interior"],
+    name: "Kia Seltos",
+    type: "SUV • 5 Seater",
+    image: carSeltos,
+    features: ["AC", "Music System", "Comfortable Seats", "Premium Interior"],
     pricing: {
       insideCity: "₹12/km",
       airport: "₹1,000",
@@ -29,26 +19,41 @@ const vehicles = [
       fullDay: "₹3,500",
       outstationPerKm: "₹14/km",
     },
-    popular: true,
+    popular: false,
   },
   {
-    name: "Maruti Ertiga",
-    type: "SUV • 7 Seater",
-    image: "🚐",
-    features: ["AC", "Music System", "Spacious", "Family Friendly"],
+    name: "Grand Vitara",
+    type: "Premium SUV • 5 Seater",
+    image: carGrandVitara,
+    features: ["AC", "Music System", "Extra Legroom", "Premium Interior"],
     pricing: {
       insideCity: "₹14/km",
       airport: "₹1,200",
-      eightHours: "₹2,800",
-      fullDay: "₹4,500",
+      eightHours: "₹2,500",
+      fullDay: "₹4,000",
       outstationPerKm: "₹16/km",
+    },
+    popular: true,
+  },
+  {
+    name: "Innova Crysta",
+    type: "MPV • 7 Seater",
+    image: carInnova,
+    features: ["AC", "Music System", "Spacious", "Family Friendly"],
+    pricing: {
+      insideCity: "₹16/km",
+      airport: "₹1,500",
+      eightHours: "₹3,000",
+      fullDay: "₹5,000",
+      outstationPerKm: "₹18/km",
     },
     popular: false,
   },
 ];
 
 const PricingSection = () => {
-  const phoneNumber = "+91 XXXXX XXXXX";
+  const phoneNumber = "+91 8756303701";
+  const whatsappLink = "https://wa.me/918756303701";
 
   return (
     <section id="pricing" className="py-20 bg-background">
@@ -83,7 +88,13 @@ const PricingSection = () => {
               )}
 
               <CardHeader className="text-center pb-4 pt-8">
-                <div className="text-6xl mb-4">{vehicle.image}</div>
+                <div className="mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src={vehicle.image} 
+                    alt={vehicle.name}
+                    className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <CardTitle className="text-2xl">{vehicle.name}</CardTitle>
                 <p className="text-muted-foreground text-sm mt-1">{vehicle.type}</p>
               </CardHeader>
@@ -126,7 +137,7 @@ const PricingSection = () => {
                 </div>
               </CardContent>
 
-              <CardFooter className="pt-4">
+              <CardFooter className="pt-4 flex flex-col gap-2">
                 <Button 
                   variant={vehicle.popular ? "saffron" : "outline"} 
                   size="lg" 
@@ -135,7 +146,22 @@ const PricingSection = () => {
                 >
                   <a href={`tel:${phoneNumber.replace(/\s/g, "")}`}>
                     <Phone className="h-4 w-4 mr-2" />
-                    Book Now
+                    Call Now
+                  </a>
+                </Button>
+                <Button 
+                  variant="whatsapp" 
+                  size="lg" 
+                  className="w-full"
+                  asChild
+                >
+                  <a 
+                    href={`${whatsappLink}?text=Hi, I want to book ${vehicle.name}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    WhatsApp
                   </a>
                 </Button>
               </CardFooter>

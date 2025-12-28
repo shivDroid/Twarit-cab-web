@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-varanasi.jpg";
 
 const HeroSection = () => {
-  const phoneNumber = "+91 XXXXX XXXXX";
-  const whatsappNumber = "91XXXXXXXXXX";
+  const phoneNumber = "+91 8756303701";
+  const whatsappLink = "https://wa.me/918756303701";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12">
@@ -67,7 +67,7 @@ const HeroSection = () => {
               asChild
             >
               <a
-                href={`https://wa.me/${whatsappNumber}?text=Hi, I want to book a cab in Varanasi`}
+                href={`${whatsappLink}?text=Hi, I want to book a cab in Varanasi`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gap-3"
@@ -78,11 +78,11 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
+      </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="h-8 w-8 text-white/60" />
-        </div>
+      {/* Scroll Indicator - Fixed at bottom center of section */}
+      <div className="absolute bottom-6 left-0 right-0 z-10 flex justify-center animate-bounce">
+        <ChevronDown className="h-8 w-8 text-white/60" />
       </div>
     </section>
   );
